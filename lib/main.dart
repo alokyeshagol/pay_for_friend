@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pay_for_friend/sb_manage.dart';
+import 'package:pay_for_friend/bottom_navigation.dart';
 
 void main() {
   runApp(
