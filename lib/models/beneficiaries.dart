@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class Beneficiary {
   const Beneficiary(
       {required this.bpId,

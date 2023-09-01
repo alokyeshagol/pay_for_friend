@@ -36,7 +36,11 @@ class ManagerScreen extends StatelessWidget {
                 ),
               ),
               subtitle: Text(manageOptionSubTitle[index]),
-              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              trailing: const Icon(
+                Icons.arrow_forward_ios_rounded,
+                color: Color.fromARGB(255, 105, 147, 222),
+                size: 15,
+              ),
             ),
           );
         });

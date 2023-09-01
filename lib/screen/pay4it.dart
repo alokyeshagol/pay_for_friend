@@ -35,7 +35,7 @@ class Pay4ITScreen extends StatelessWidget {
             child: Container(
               child: Image.asset(
                 'assets/images/dice-1.png',
-                width: ,
+                width: 12.0,
               ),
             ),
           ),
