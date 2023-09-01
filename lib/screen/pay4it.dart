@@ -23,19 +23,23 @@ class Pay4ITScreen extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 30, 7, 233),
-        title: const Text(
-          'Pay4IT',
-        ),
+        backgroundColor: const Color.fromARGB(255, 18, 50, 163),
+        elevation: 0,
       ),
       body: Column(
+        mainAxisSize: MainAxisSize.max,
         children: [
-          AspectRatio(
-            aspectRatio: 16 / 9,
-            child: Container(
+          Container(
+            width: double.infinity,
+            padding: EdgeInsets.zero,
+            margin: EdgeInsets.zero,
+            child: Center(
+              widthFactor: double.infinity,
               child: Image.asset(
-                'assets/images/dice-1.png',
-                width: 12.0,
+                'assets/images/iGotchu-main3.png',
+                fit: BoxFit.fill, // This makes the image fill the width
+                width: double.infinity, // Set the width to fill the screen
+                height: 200, // Set the desired height // Set the desired height
               ),
             ),
           ),
