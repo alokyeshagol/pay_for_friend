@@ -1,5 +1,4 @@
 import 'package:pay_for_friend/models/beneficiaries.dart';
-import 'package:flutter/material.dart';
 
 const availableBeneficaries = [
   Beneficiary(

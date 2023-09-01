@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:pay_for_friend/screen/manage_screen.dart';
-import 'package:pay_for_friend/screen/pay4it.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pay_for_friend/screen/home_screen.dart';
+import 'package:pay_for_friend/screen/manage_screen.dart';
 
 class MenuOption extends StatelessWidget {
   const MenuOption({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: SBNavigation(),
-    );
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const SBNavigation(),
+        theme: ThemeData(
+          fontFamily: GoogleFonts.workSans().fontFamily,
+        ));
   }
 }
 
@@ -22,7 +25,7 @@ class SBNavigation extends StatefulWidget {
 }
 
 class _SBNavigationState extends State<SBNavigation> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 1;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
@@ -44,15 +47,21 @@ class _SBNavigationState extends State<SBNavigation> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 30, 7, 233),
-        title: const Text(
-          'Pay4IT',
-        ),
-      ),
+          backgroundColor: const Color.fromARGB(255, 18, 50, 163),
+          title: const Center(
+            child: Text(
+              'Manage',
+              style: TextStyle(fontSize: 15),
+            ),
+          )),
       body: Center(
         child: setBody(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 1,
+        iconSize: 20,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -60,7 +69,7 @@ class _SBNavigationState extends State<SBNavigation> {
             //backgroundColor: Colors.grey,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
+            icon: Icon(Icons.tune_rounded),
             label: 'Manage',
             //backgroundColor: Colors.green,
           ),
@@ -81,7 +90,7 @@ class _SBNavigationState extends State<SBNavigation> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: const Color.fromARGB(255, 26, 4, 136),
+        selectedItemColor: const Color.fromARGB(255, 58, 121, 242),
         onTap: _onItemTapped,
         unselectedItemColor: Colors.grey,
       ),

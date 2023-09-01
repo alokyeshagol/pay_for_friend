@@ -5,7 +5,7 @@ final List<String> manageOptionTitle = [
   "Beneficiaries",
   "Debit orders",
   "Payshap",
-  "Pay4IT"
+  "iGotchU"
 ];
 final List<String> manageOptionSubTitle = [
   "Settings & limits",
@@ -15,24 +15,29 @@ final List<String> manageOptionSubTitle = [
   "Add, remove, setlimits for beneficiary"
 ];
 final List<Widget> iconsLeading = [
-  const Icon(
-    Icons.credit_card,
-    color: Color.fromARGB(255, 11, 9, 128),
+  const ImageIcon(
+    AssetImage("assets/images/card.png"),
+    size: 40,
+    color: Color.fromARGB(255, 17, 52, 165),
   ),
-  const Icon(
-    Icons.people,
-    color: Color.fromARGB(255, 11, 9, 128),
+  const ImageIcon(
+    AssetImage("assets/images/ben.png"),
+    size: 40,
+    color: Color.fromARGB(255, 17, 52, 165),
   ),
-  const Icon(
-    Icons.access_time_sharp,
-    color: Color.fromARGB(255, 11, 9, 128),
+  const ImageIcon(
+    AssetImage("assets/images/debit-order.png"),
+    size: 40,
+    color: Color.fromARGB(255, 17, 52, 165),
   ),
-  const Icon(
-    Icons.ads_click_rounded,
-    color: Color.fromARGB(255, 11, 9, 128),
+  const ImageIcon(
+    AssetImage("assets/images/paysharp.png"),
+    size: 40,
+    color: Color.fromARGB(255, 17, 52, 165),
   ),
-  const Icon(
-    Icons.handshake_rounded,
-    color: Color.fromARGB(255, 11, 9, 128),
-  )
+  const ImageIcon(
+    AssetImage("assets/images/iGotU.png"),
+    size: 40,
+    color: Color.fromARGB(255, 17, 52, 165),
+  ),
 ];
