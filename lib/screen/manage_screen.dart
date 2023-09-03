@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pay_for_friend/data/manage_options_menu.dart';
+import 'package:pay_for_friend/screen/approval.dart';
 import 'package:pay_for_friend/screen/pay4it.dart';
 
 class ManagerScreen extends StatelessWidget {
@@ -14,16 +15,23 @@ class ManagerScreen extends StatelessWidget {
     );
   }
 
+  void iGotApproved(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => IGotApprovals(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return ListView.builder(
         itemCount: manageOptionTitle.length,
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () {
               if (index == 4) {
-                _onPay4IT(context);
+                iGotApproved(context);
               }
             },
             child: ListTile(
