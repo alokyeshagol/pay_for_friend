@@ -5,15 +5,27 @@
 //   3. select beneficairy whom you want to send the payment request.
 
 import 'package:flutter/material.dart';
+import 'package:pay_for_friend/screen/request_pay_screen.dart';
+import 'package:pay_for_friend/screen/manage_beneficiary.dart';
+
+const String semanticLabel = "Request Pay";
 
 class Pay4ITScreen extends StatelessWidget {
   const Pay4ITScreen({super.key});
 
   //below code excutes when the user clicks on the Pay4IT list item
-  void _onPay4IT(BuildContext context) {
+  void _onRequestPay(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (ctx) => const Pay4ITScreen(),
+        builder: (ctx) => const RequestPay(),
+      ),
+    );
+  }
+
+  void _onManageBeneficiary(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => ManageBeneficiary(),
       ),
     );
   }
@@ -43,15 +55,74 @@ class Pay4ITScreen extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            margin: const EdgeInsets.all(20.0),
-            child: const Center(
-              child: Text(
-                "Below the Grid will go",
-                style: TextStyle(fontSize: 40),
-              ),
-            ),
+          const SizedBox(
+            height: 20,
           ),
+          Row(
+            children: <Widget>[
+              const SizedBox(
+                width: 30,
+              ),
+              IconButton(
+                iconSize: 80,
+                onPressed: () {
+                  _onRequestPay(context);
+                },
+                icon: const ImageIcon(
+                  AssetImage("assets/images/pay.png"),
+                  size: 100,
+                  semanticLabel: String.fromEnvironment(semanticLabel),
+                ),
+              ),
+              const SizedBox(
+                width: 30,
+              ),
+              IconButton(
+                iconSize: 80,
+                onPressed: () {
+                  _onManageBeneficiary(context);
+                },
+                icon: const ImageIcon(
+                  AssetImage("assets/images/icons8-automatic-100.png"),
+                  size: 100,
+                  semanticLabel: String.fromEnvironment(semanticLabel),
+                ),
+              ),
+              const SizedBox(
+                width: 30,
+              ),
+              IconButton(
+                iconSize: 80,
+                onPressed: () {},
+                icon: const ImageIcon(
+                  AssetImage("assets/images/icons8-faq-100.png"),
+                  size: 100,
+                ),
+              ),
+              const SizedBox(
+                width: 30,
+              ),
+            ],
+          ),
+          const Row(
+            children: <Widget>[
+              SizedBox(
+                width: 30,
+              ),
+              Text("Request Pay"),
+              SizedBox(
+                width: 50,
+              ),
+              Text("Settings"),
+              SizedBox(
+                width: 65,
+              ),
+              Text("FAQs"),
+              SizedBox(
+                width: 30,
+              ),
+            ],
+          )
         ],
       ),
     );

@@ -3,7 +3,7 @@ class Beneficiary {
       {required this.bpId,
       required this.beneficiaryName,
       required this.accountNumber,
-      this.limit = 0.0});
+      required this.limit});
 
   final String bpId;
   final String beneficiaryName;

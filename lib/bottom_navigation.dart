@@ -26,6 +26,7 @@ class SBNavigation extends StatefulWidget {
 
 class _SBNavigationState extends State<SBNavigation> {
   int _selectedIndex = 1;
+
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
