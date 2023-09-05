@@ -4,8 +4,9 @@ import 'package:pay_for_friend/screen/pending_request_detail.dart';
 
 class ApprovalItem extends StatelessWidget {
   final DummyPerson person;
+  final int index;
 
-  const ApprovalItem({super.key, required this.person});
+  const ApprovalItem({super.key, required this.person, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +14,9 @@ class ApprovalItem extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (ctx) => PendingRequestDetial(
+            builder: (ctx) => PendingRequestDetail(
               requestDetails: {"name": person.name, "surname": person.surname},
+              index: index,
             ),
           ),
         );

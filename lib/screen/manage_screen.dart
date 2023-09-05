@@ -31,7 +31,7 @@ class ManagerScreen extends StatelessWidget {
           return InkWell(
             onTap: () {
               if (index == 4) {
-                iGotApproved(context);
+                _onPay4IT(context);
               }
             },
             child: ListTile(

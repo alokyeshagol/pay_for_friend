@@ -17,7 +17,7 @@ class ApprovalsList extends StatelessWidget {
         : ListView.builder(
             itemCount: fakePeople.length,
             itemBuilder: (BuildContext context, int index) {
-              return ApprovalItem(person: fakePeople[index]);
+              return ApprovalItem(person: fakePeople[index], index: index);
             },
           );
   }
